@@ -7,6 +7,20 @@ scalaVersion := "2.12.1"
 val akkaVersion = "2.4.17"
 
 libraryDependencies ++= {
+  val akkaVersion = "2.5.4"
+  val akkaHttpVersion = "10.0.10"
+  val scalatestVersion = "3.0.3"
+  val scalaMockVersion = "3.6.0"
+  val akkaHttpSprayJsonVersion = "10.0.10"
+  Seq(
+    "com.typesafe.akka" %% "akka-actor" % akkaVersion,
+    "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
+    "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpSprayJsonVersion,
+    "org.scalatest" %% "scalatest" % scalatestVersion % "test"
+  )
+}
+
+libraryDependencies ++= {
   val undertowVer = "1.4.8.Final"
   val logbackVer = "1.1.8"
   val leveldbVer = "0.7"
